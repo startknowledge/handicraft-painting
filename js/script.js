@@ -1,7 +1,12 @@
 const gallery = document.getElementById("gallery");
 
 async function loadImages() {
-  const res = await fetch("api/images");
+  const res = await fetch("https://startknowledge-api.82749sondeep.workers.dev/list", {
+  headers:{
+    "x-api-key":"sk_startknowledge_2026_secure"
+  }
+});
+
   const data = await res.json();
 
   gallery.innerHTML = "";
