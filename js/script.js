@@ -11,7 +11,9 @@ async function loadImages() {
 
     const data = await res.json();
 
-    gallery.innerHTML = "";
+    if (!gallery.children.length) {
+      gallery.innerHTML = "";
+    }
 
     data.reverse().forEach(img => {
 
@@ -46,4 +48,4 @@ lightbox.onclick = () => {
 };
 
 loadImages();
-setInterval(loadImages, 10000);
+setInterval(loadImages, 30000);
