@@ -11,9 +11,7 @@ async function loadImages() {
 
     const data = await res.json();
 
-    if (!gallery.children.length) {
-      gallery.innerHTML = "";
-    }
+    gallery.innerHTML = "";
 
     data.reverse().forEach(img => {
 
