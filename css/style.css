@@ -5,9 +5,7 @@
 body{
   margin:0;
   font-family:'Segoe UI',sans-serif;
-  background:linear-gradient(135deg,#0f172a,#111827);
-  color:white;
-  text-align:center;
+  background: #050816;
 }
 
 /* HEADER */
@@ -78,6 +76,21 @@ footer{
   padding:20px;
   opacity:.6;
 }
+canvas{
+  position: fixed !important;
+  inset: 0;
+  z-index: -1 !important;
+  pointer-events: none;
+}
+
+/* MAIN UI ABOVE */
+header,
+.gallery-container,
+footer{
+  position: relative;
+  z-index: 2;
+}
+
 
 /* ANIMATIONS */
 @keyframes fadeUp {
