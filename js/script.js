@@ -27,10 +27,15 @@ async function loadImages() {
       `;
 
       // CLICK LARGE VIEW
-      card.querySelector("img").onclick = () => {
+      /* card.querySelector("img").onclick = () => {
         lightbox.style.display = "flex";
         lightboxImg.src = img.url;
-      };
+      }; */
+      const image = card.querySelector("img");
+      image.onclick = () => {
+        // toggle zoom class
+        image.classList.toggle("zoomed");
+        };
 
       gallery.appendChild(card);
     });
