@@ -13,7 +13,14 @@ async function loadImages() {
 
     gallery.innerHTML = "";
 
-    data.reverse().forEach(img => {
+   // data.reverse().forEach(img => {
+      data
+  .sort((a, b) => {
+    const dateA = new Date(a.date + " " + a.time);
+    const dateB = new Date(b.date + " " + b.time);
+    return dateB - dateA; // newest first
+  })
+  .forEach(img => {
 
       const card = document.createElement("div");
       card.className = "card";
